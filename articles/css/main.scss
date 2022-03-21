@@ -1,0 +1,546 @@
+//Fonts
+@font-face {
+  font-family: "poppins";
+  src: url("../fonts/Poppins/Poppins-Regular.ttf");
+}
+@mixin font {
+  font-family: "poppins", arial;
+}
+.poppins {
+  @include font();
+}
+body {
+  box-sizing: border-box;
+}
+/////Navbar Start/////
+.d-profile {
+  display: flex;
+  justify-content: end;
+  button {
+    img {
+      width: 45px;
+      height: 45px;
+      object-fit: fill;
+    }
+  }
+  button:focus {
+    outline: 0px !important;
+    -webkit-appearance: none;
+    box-shadow: none !important;
+  }
+  a {
+    color: #6c75a5;
+    @include font();
+  }
+}
+.navbar-nav .nav-item {
+  margin-right: 0.2rem;
+  .nav-link {
+    @include font();
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 23px;
+  }
+}
+.navbar .input-group button {
+  background-color: #d8e0e8;
+  &:hover {
+    background-color: #111;
+    .fa-search {
+      color: #ffffff;
+    }
+  }
+}
+
+.navbar .input-group button .fa-search {
+  color: #5cb8ba;
+}
+/////Navbar End/////
+/////BreadCrumb Start/////
+.bc-bg {
+  @include font();
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  h1 {
+    color: white;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 58px;
+    display: flex;
+    height: auto;
+    justify-content: center;
+    //***
+  }
+  nav {
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 600;
+    font-size: 27px;
+    color: white;
+    font-family: "poppins" arial;
+    .breadcrumb-item {
+      color: white;
+
+      &:before {
+        color: white;
+      }
+    }
+    a {
+      text-decoration: none !important;
+      color: white;
+      &:hover {
+        color: black;
+      }
+    }
+  }
+}
+/////BreadCrumb End/////
+/////Form Start/////
+.title-sign {
+  h1 {
+    font-weight: 700;
+    @include font();
+
+    .under-line {
+      border-bottom: 5px solid #5cb8ba;
+      padding-bottom: 2px;
+    }
+  }
+}
+.title-sign + p {
+  font-weight: 500;
+  font-size: 16px;
+  @include font();
+  a {
+    text-decoration: none;
+    color: #5cb8ba;
+    &:hover {
+      color: black;
+    }
+  }
+}
+.email-icon {
+  background: url(../img/envelope-regular.svg) no-repeat center right;
+  background-size: 1.5rem;
+  background-position-x: 2%;
+  padding: 15px 12px 15px 38px;
+  @include font();
+}
+.password-icon {
+  background: url(../img/lock-solid.svg) no-repeat center right;
+  background-size: 1.5rem;
+  background-position-x: 2%;
+  padding: 15px 12px 15px 38px;
+  @include font();
+}
+.terms-check label {
+  color: #6c758d;
+  @include font();
+}
+@mixin login-button($x) {
+  padding: $x;
+  background-color: #18a8aa;
+  color: #f9fdff;
+
+  @include font();
+  &:hover {
+    background-color: #007577;
+    color: #f9fdff;
+  }
+}
+.login-button-main {
+  @include login-button(0.6rem 2rem);
+  font-size: 1rem;
+}
+
+.change-password-link {
+  color: #bbbbbb;
+  text-decoration: none;
+  @include font();
+  text-align: left;
+}
+.change-password-link:hover {
+  color: #2e2529;
+}
+@mixin button-login-media {
+  border-color: #ced4da;
+  width: 19.8rem;
+  height: 3.4rem;
+  text-align: right;
+
+  &:hover {
+    background-color: white;
+  }
+  span {
+    vertical-align: middle;
+    margin: auto 2.3rem !important;
+    color: #cfc7c7;
+    @include font();
+    &:hover {
+      color: #878787;
+    }
+  }
+}
+.button-login-media-google {
+  width: 291px;
+  @include button-login-media();
+}
+.button-login-media-facebook {
+  width: 291px;
+  @include button-login-media();
+  background-color: #1877f2 !important;
+  span {
+    color: #cfc7c7;
+    &:hover {
+      color: #cfc7c7 !important;
+    }
+  }
+}
+
+.signup-btn {
+  color: #7dcef7;
+  text-decoration: none;
+  margin-right: 0.3rem;
+}
+.signup-btn:hover {
+  color: #2e2529;
+}
+.privacy {
+  font-size: 14px !important;
+  @include font();
+  color: #708189;
+}
+/////Form End/////
+/////Footer Start/////
+.top-footer {
+  h1 {
+    @include font();
+    color: white;
+    font-weight: 600;
+    font-size: 22px;
+  }
+}
+@mixin footer-link {
+  a {
+    display: block;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 23px;
+    @include font();
+    color: white;
+    text-decoration: none;
+  }
+}
+.top-footer .first-ul:nth-of-type(1) ul {
+  position: relative;
+
+  li {
+    padding-left: 60px;
+  }
+  i {
+    font-size: 42px;
+    color: #ffffff;
+    position: absolute;
+    left: 0;
+  }
+  @include footer-link();
+}
+.top-footer {
+  @include footer-link();
+}
+.feedback-form {
+  textarea,
+  input {
+    border: hidden;
+    background-color: #5cb8ba;
+    color: white;
+    border-bottom: 1px solid white;
+    padding-bottom: 10px;
+    width: 100%;
+    margin-bottom: 25px;
+    @include font();
+    &:focus {
+      outline: none;
+    }
+    &::placeholder {
+      color: white;
+    }
+  }
+}
+.feedback-form {
+  textarea {
+    padding-bottom: 40px;
+  }
+}
+.submit-button {
+  @include font();
+  padding: 0.7rem 2rem;
+  border-radius: 30px;
+}
+
+.submit-button {
+  background-color: white;
+  color: #7dcef7;
+  &:hover {
+    background-color: #000;
+    color: white;
+  }
+}
+
+//
+// .list-footer {
+//     font-family: Tajawal,tahoma;
+//     p{
+//         color:#333333;
+//         font-weight: 500;
+//     }
+//     ul{
+//         padding-right: 0;
+//         li{
+//             margin-bottom:5px;
+//            a{
+//             color:#AAA2A8;
+//             text-decoration: none;
+//             &:hover{
+//                 color:#18BBD7
+//             }}
+//         }
+
+//     }
+//     a[role="button"]{
+//         padding:0.7rem 3.1rem;
+//         border-radius: 1.4rem;
+//     }
+//     // .googleplay{
+//     //     @include footer-button-background("/img/google-play.svg");
+
+//     // }
+//     // .appstore{
+//     //     @include footer-button-background("/img/app-store.svg");
+
+//     // }
+
+// }
+
+.footer {
+  @include font();
+  a {
+    text-decoration: none;
+  }
+  p:nth-of-type(1) {
+    color: #39597f;
+  }
+  p:nth-of-type(2) {
+    color: #8f9fb7;
+  }
+}
+/////////////////////////////////////////
+//join.css
+.users-icons {
+  @include font();
+  font-size: 1.2rem;
+
+  span {
+    display: inline-block;
+    background: #d0eeee;
+
+    border-radius: 50%;
+    margin-left: 10px;
+  }
+  a {
+    text-decoration: none;
+    color: #0d0d0d;
+    cursor: pointer;
+  }
+}
+//////////////////////////////
+//register.html
+.firstname-icon {
+  background: url(../img/firstname-icon.svg) no-repeat center right;
+  background-size: 1.5rem;
+  background-position-x: 2%;
+  padding: 15px 12px 15px 38px;
+  @include font();
+}
+.non-icon {
+  padding: 11px 36px 11px 12px;
+  @include font();
+}
+input[type="date"],
+input[type="tel"] {
+  color: #6c7589;
+}
+.form-select {
+  color: #6c757d;
+  option:disabled {
+    color: #a8b5c0;
+  }
+}
+
+.signup-button-main {
+  @include login-button(0.8rem 3rem);
+}
+.conditions-link {
+  font-family: Tajawal, tahoma;
+  color: #cfc7c7;
+  text-decoration: none;
+  cursor: pointer;
+  &:hover {
+    color: #878787;
+  }
+}
+////
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+@-webkit-keyframes autofill-valid {
+  to {
+    /* Background image copied from: node_modules/bootstrap/dist/css/bootstrap.css selector: .was-validated .form-control:valid, .form-control.is-valid */
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23198754' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
+  }
+}
+
+@-webkit-keyframes autofill-invalid {
+  to {
+    /* Background image copied from: node_modules/bootstrap/dist/css/bootstrap.css selector: .was-validated .form-control:invalid, .form-control.is-invalid */
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
+  }
+}
+input.is-valid:-webkit-autofill {
+  -webkit-animation-name: autofill-valid !important;
+  -webkit-animation-fill-mode: both !important;
+}
+
+input.is-invalid:-webkit-autofill {
+  -webkit-animation-name: autofill-invalid !important;
+  -webkit-animation-fill-mode: both !important;
+}
+///////profile
+.setting {
+  @include font();
+  font-size: 30px;
+}
+.profile-setting {
+  border-bottom: none;
+  li {
+    padding: 5px 0 5px 0;
+    @include font();
+    cursor: pointer;
+
+    &:hover {
+      background-color: #f7f5ff;
+    }
+    button {
+      width: 100% !important;
+      text-align: start;
+      @media (max-width: 992px) {
+        padding: 0 0;
+      }
+      a {
+        text-decoration: none;
+        color: #898eb4;
+        font-size: 15px;
+        margin-left: 5px;
+      }
+      i {
+        color: #898eb4;
+        font-size: 20px;
+        margin-left: 5px;
+      }
+    }
+  }
+}
+.basic-info {
+  h1 {
+    @include font();
+    margin-bottom: 20px;
+    font-size: 30px;
+  }
+}
+//////////////
+.image-upload {
+  label {
+    @include font();
+    color: #6c7591;
+  }
+  input {
+    //display: none;
+    visibility: hidden;
+  }
+}
+
+.image-upload img {
+  width: 80px;
+  cursor: pointer;
+}
+.country {
+  h5 {
+    @include font();
+    color: #6c7591;
+    font-size: 16px;
+  }
+}
+.half-hr {
+  width: 70%;
+  margin: 10px auto;
+}
+.rg-status {
+  @include font();
+  font-size: 15px;
+  color: #b7b7b7;
+}
+.subscribe {
+  @include font();
+}
+.accordion-item {
+  border: 1px solid #ced4da;
+  margin-bottom: 1rem;
+
+  button {
+    padding: 1rem 0.6rem;
+    img {
+      margin-right: 10px;
+    }
+    h5 {
+      @include font();
+      font-size: 1.2rem;
+      margin: 0;
+    }
+  }
+}
+.form-floating {
+  input {
+    @include font();
+    color: #6c757d;
+  }
+  label {
+    @include font();
+    color: #6c757d;
+  }
+}
+
+h5 {
+  @include font();
+  color: #6c7591;
+  font-size: 16px;
+}
+.mini-title {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.3);
+}
+.search-chronic::placeholder {
+  @include font();
+  color: #6c7591;
+}
+.invalid-feedback {
+  display: block;
+}
