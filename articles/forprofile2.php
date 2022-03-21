@@ -127,7 +127,7 @@ session_start() ?>
 
     //connect to DB to select all the articles Descending Order by the number of views and return 7 rows in every page
     $query = "SELECT * FROM articles ORDER BY views DESC LIMIT 7 OFFSET 7";
-    $query_run = mysqli_query($connection, $link);
+    $query_run = mysqli_query($link, $query);
     ?>
     <div class="col-lg-8 text-center">
 

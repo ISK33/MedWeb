@@ -93,7 +93,7 @@ session_start();
 include('config.php');
   $id = $_GET['id']; // increase the view 1 when we visit this article's page
   $query = "UPDATE articles SET views= views + 1 WHERE id='$id'";
-  $query_run = mysqli_query($connection, $link);
+  $query_run = mysqli_query($link, $query);
 
   if ($query_run) {
     $_SESSION['success'] = "info updated";
@@ -114,7 +114,7 @@ include('config.php');
 
 
       $query = "SELECT * FROM articles WHERE id='$id'";
-      $query_run = mysqli_query($connection, $query);
+      $query_run = mysqli_query($link, $query);
 
 
       ?>
@@ -150,9 +150,8 @@ include('config.php');
 
 
       <?php
-      $connection = mysqli_connect('localhost', 'id16673673_mws', 'Mws123456789@', 'id16673673_medweb');
       $query = "SELECT * FROM addadvice";
-      $query_run = mysqli_query($connection, $query);
+      $query_run = mysqli_query($link, $query);
       ?>
       <div class="col-lg-4">
 
