@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <link
+    rel="shortcut icon"
+    type="image/x-icon"
+    href="img/logo.png"
+  />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Log In</title>
+    <!--build:css css/main.css-->
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <link
+      rel="stylesheet"
+      href="node_modules/@fortawesome/fontawesome-free/css/all.css"
+    />
+    <script>if(sessionStorage.getItem("log")){window.location.href="index.html"}</script>
+        <!--reCaptcha script-->
+        <script type="text/javascript">
+          var verifyCallback = function(response) {
+            alert(response);
+          };
+          var widgetId1;
+          var widgetId2;
+          var onloadCallback = function() {
+            // Renders the HTML element with id 'example1' as a reCAPTCHA widget.
+            // The id of the reCAPTCHA widget is assigned to 'widgetId1'.
+            widgetId1 = grecaptcha.render('example1', {
+              'sitekey' : 'your_site_key',
+              'theme' : 'light'
+            });
+            widgetId2 = grecaptcha.render(document.getElementById('example2'), {
+              'sitekey' : '6LdxaLwaAAAAANb93yCoRBipwlUa4EJ809F3eP0C'
+            });
+            grecaptcha.render('example3', {
+              'sitekey' : '6LdxaLwaAAAAANb93yCoRBipwlUa4EJ809F3eP0C',
+              'callback' : verifyCallback,
+              'theme' : 'dark'
+            });
+          };
+        </script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <!--endbuild-->
+  </head>
+  <body>
+    <div class="container">
+        <!--Navbar Start-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+            <a class="navbar-brand p-3" href="index.php">
+              <img
+            class="img-fluid"
+            src="img/logo.png"
+            alt="MedWeb"
+          />
+            </a>
+            <button
+              class="navbar-toggler"
+              data-bs-toggle="collapse"
+              data-bs-target="#navmenu"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navmenu">
+              <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
+                <li class="nav-item">
+                  <a href="index.php" role="button" class="nav-link font-family-Tajawal"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a href="" role="button" class="nav-link font-family-Tajawal"
+                    >Questions and Answers</a
+                  >
+                </li>
+            <li class="nav-item">
+              <a href="http://isk133.pythonanywhere.com/form" role="button" class="nav-link font-family-Tajawal">Heart disease</a>
+            </li>
+              </ul>
+              <form class="d-flex ms-auto">
+                <div class="input-group">
+                
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <!--Navbar End-->
+      <!-- breakcrump Start-->
+    <div class="row g-0">
+      <div
+        class="col-12 bc-bg"
+        style="
+              background-image: url(img/bc.jpg);
+  
+  height:400px;
+        "
+      >
+      <div >
+        <h1>Log In</h1>
+        <nav style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Log In</li>
+  
+          </ol>
+        </nav>
+        </div>
+      </div>
+    </div>
+    <!--breakcrump End-->
+  
+      <!--From Start-->
+    <div class="container mb-5" style="margin-top: 75px">
+      <div class="row">    
+        <div class="col-12 col-md-3"></div>
+        <div class="col-12 col-md-6 border p-5 pb-3" style="margin-bottom: 75px;">
+          <div class="row mb-5">
+            <div class="col-12 text-start title-sign mb-4">
+              <h1><span class="under-line">Log</span> In Here</h1>
+            </div>
+            <p>  you don't have an Account?<a href="joinus.html"> Sign Up</a></p>
+          </div>
+          <div class="row"></div>
+          <form>
+            
+              <input
+              autocomplete="false"
+
+                type="text"
+                class="form-control email-icon mb-3"
+                placeholder="Email or phone number..."
+                aria-label="Username"
+                aria-describedby="basic-addon1"
+              />
+              <div id="email-invalid-feedback" class="mt-0 mb-3 invalid-feedback d-block">
+              </div>
+              <input
+              autocomplete="false"
+
+                type="password"
+                class="form-control password-icon mb-4"
+                placeholder="Password"
+                aria-label="Password"
+                aria-describedby="basic-addon2"
+              />
+
+              <div id="password-invalid-feedback" class="mt-0 mb-3 invalid-feedback d-block">
+            </div>
+            <div class="g-recaptcha" data-sitekey="6LdxaLwaAAAAANb93yCoRBipwlUa4EJ809F3eP0C"></div>
+            <div id="recaptcha-feedback" class="mt-0 mb-3 invalid-feedback d-block">
+            </div>
+
+              <div class="row mb-3">
+                  
+                  <div class="col-6 text-start my-auto">
+                    <a class="change-password-link" href="">Did you forgot your Password?</a>
+                </div>
+                <div class="col-6 text-end">
+                    <button class="btn login-button-main">Log In</button>
+                </div>
+              </div>
+              <div class="row mb-3">
+                  <div class="col-5 text-end">
+                  <hr>
+                  </div>
+                  <div class="col-2 text-center">
+                      Or
+                  </div>
+                  <div class="col-5 text-end">
+                <hr>
+                </div>
+              </div>
+              <div class="row mb-3">
+                <div class="col-12 text-center">
+                <a class="btn btn-outline-secondary button-login-media-facebook"><span class="" style="text-align:center">Log in by Facebook</span><img src='img/facebook-brands.svg' style="width: 2.3rem"></a>
+                </div>
+                </div>
+                <div class="row mb-4">
+                    <div class="col-12 text-center">
+                <a role="button" class="btn btn-outline-dark button-login-media-google"><span>Log in with Google</span><img src="img/google-icon.svg"></a>
+                    </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-12 text-center privacy">
+                            Privacy Usage |<a role="button" class="signup-btn" href=""> terms</a>
+                        
+                        </div>
+                    </div>
+            </div>
+          </form>
+        </div>
+      
+    </div>
+    <!--Form End-->
+    
+    <!--Footer Start-->
+    <div 
+        style="
+            background-color: #5CB8BA;
+            background-image: url('img/footer-bg.png');
+           
+        "
+    >
+    <div class="container top-footer">
+        <div class="row mb-3 pt-4 pb-5">
+            <div class="col-sm-6 col-lg-4 mt-5 first-ul">
+             <h1>Contact Us</h1>
+             <ul class="list-unstyled"> 
+                 <li class="mb-4 mt-4">
+                     
+             <i class="fas fa-envelope"></i>
+             <a>skndaratiah@gmail.com</a>
+
+            </li>
+           
+            </ul>
+            </div>
+            <div class="col-sm-12 col-lg-2 mt-5">
+                <h1>ًWeb Devlopers</h1>
+                <ul class="list-unstyled">
+                    <li class="mb-4 mt-4"><a href="">Iskandar Atieh</a></li>
+
+                   
+                </ul>
+            </div>
+                <div class="col-sm-12 col-lg-3 mt-5">
+                    <h1>Our Services</h1>
+                    <ul class="list-unstyled">
+                        <li class="mb-4 mt-4"><a href="">Dental Care</a></li>
+                        <li class="mb-4"><a href="">Cardiology</a></li>
+                        <li class="mb-4"><a href="">Hijama Therapy</a></li>
+                        <li class="mb-4"><a href="">Massage Therapy</a></li>
+                        <li class="mb-4"><a href="">Ambluance Sevices</a></li>
+                        <li class="mb-4"><a href="">Medicine</a></li>
+                            
+                    </ul>
+            </div>
+            
+            <div class="col-sm-6 col-lg-3 mt-5 feedback-form">
+               <h1 class="mb-4">Feedback</h1>
+               <input type="text" class="" placeholder="Name">
+               <input type="text" class="" placeholder="Phone">
+               <textarea placeholder="Message"></textarea>
+               <button class="btn submit-button">Submit</button>
+          
+        </div>
+        
+       
+    </div>
+    </div>
+    </div>
+    
+    <div class="row g-0 footer">
+        <div class="col-12 col-sm-5 text-center text-sm-end">
+          <a href="">
+            <img
+              class="me-3"
+              alt="facebook share icon"
+              src="img//facebook-icon.svg"
+            />
+          </a>
+          <a href="">
+            <img
+              class="me-3"
+              alt="linkedin share icon"
+              src="img/linkedin-icon.svg"
+            />
+          </a>
+          <a href="">
+            <img
+              class="me-3"
+              alt="twitter share icon"
+              src="img/twitter-icon.svg"
+            />
+          </a>
+          <a href="">
+            <img
+              class="me-3"
+              alt="youtube share icon"
+              src="img/youtube-icon.svg"
+            />
+          </a>
+        </div>
+        <div class="col-12 col-sm-7">
+          <p class="mb-2 mb-sm-0 text-center text-sm-start">
+            All medical information on the website aims to increase health
+            awareness
+          </p>
+        </div>
+        <div class="row">
+          <p class="text-sm-end mt-3" style="text-align: center !important">
+            Copyright @2021 Design & Developed by MedWeb
+          </p>
+        </div>
+      </div>
+  
+    
+        
+    
+    <!--build:js js/main.js-->
+    <!-- <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/popper.js/dist/popper.min.js"></script> -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"
+      integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js"
+      integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/login.js"></script>
+    <!--endbuild-->
+  </body>
+</html>
